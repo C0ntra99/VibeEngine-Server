@@ -14,6 +14,11 @@ const config={
             "name":"Rounds",
             "route":"/api/rounds",
             "app_path":"./routes/api/rounds"
+        },
+        {
+            "name":"Connection",
+            "route":"/api/connection",
+            "app_path":"./routes/api/connection"
         }
     ],
     "globals":{

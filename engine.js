@@ -7,6 +7,8 @@ class Engine{
     __score_instances(instances){
         instances.map((instance) => {
             logger.info({label:`__score_instance`, message:`Scoring instance: ${instance._id}`})
+            //This needs to be changed to you know...the actuall client API requests
+            // But they havent been written yet, I wonder if tom is done with that :/
             axios.get(`http://${instance.os_details.network.ip_addr}:8000/.zshrc`)
             .then((resp) => {
                 logger.debug({label:`__score_instance`, message:`Score recieved from ${instance.os_details.network.ip_addr}. Updating score in database...`})
